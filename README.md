@@ -1,1 +1,1 @@
-https://nsk-branding.github.io/navbar.io/
+https://nsk-branding.github.io/navbar.io/dist/index.html
