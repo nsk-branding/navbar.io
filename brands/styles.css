@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
+a img {
+    transition: filter 0.3s ease;
+}
+
+a:hover img {
+    filter: hue-rotate(45deg);
+    /* Efecto hover en naranja */
+}
