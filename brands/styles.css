@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: transparent;
+    background-color: #f4f4f4;
 }
 
 .gallery {
@@ -22,6 +22,7 @@ body {
 a {
     margin: 10px 0;
     transition: transform 0.3s ease;
+    text-align: center;
 }
 
 a:hover {
@@ -29,10 +30,28 @@ a:hover {
 }
 
 a img {
+    max-width: 100px;
+    /* Ajusta el tamaño máximo de las imágenes */
+    height: auto;
     transition: filter 0.3s ease;
 }
 
 a:hover img {
     filter: hue-rotate(45deg);
     /* Efecto hover en naranja */
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    a img {
+        max-width: 80px;
+        /* Reduzco el tamaño en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 400px) {
+    a img {
+        max-width: 60px;
+        /* Más pequeño en pantallas muy pequeñas */
+    }
 }
