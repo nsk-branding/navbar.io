@@ -5,9 +5,6 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     background-color: transparent;
 }
@@ -15,8 +12,19 @@ body {
 .gallery {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    /* Alinea las imágenes desde el principio */
     align-items: center;
+    position: fixed;
+    /* Fija la galería */
+    top: 0;
+    /* Coloca la galería en la parte superior */
+    left: 50%;
+    /* Centra horizontalmente */
+    transform: translateX(-50%);
+    /* Ajusta la posición al centro de la pantalla */
+    padding-top: 10px;
+    /* Añade un pequeño margen superior */
 }
 
 a {
@@ -32,7 +40,6 @@ a:hover {
 
 a img {
     max-width: 100px;
-    /* Ajusta el tamaño máximo de las imágenes */
     height: auto;
     transition: filter 0.3s ease;
     border-radius: 2px;
@@ -43,17 +50,14 @@ a:hover img {
     /* Efecto hover en naranja */
 }
 
-/* Estilos responsivos */
 @media (max-width: 600px) {
     a img {
         max-width: 80px;
-        /* Reduzco el tamaño en pantallas pequeñas */
     }
 }
 
 @media (max-width: 400px) {
     a img {
         max-width: 60px;
-        /* Más pequeño en pantallas muy pequeñas */
     }
 }
